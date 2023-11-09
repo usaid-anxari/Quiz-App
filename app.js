@@ -51,8 +51,8 @@ const [questionElm, option_1, option_2, option_3, option_4] =
     "#question, .option_1, .option_2, .option_3, .option_4"
   );
 let submitBtn = document.querySelector("#submit");
-// let button = document.getElementById('submit')
-// let userInput = document.getElementsByClassName('answer')
+let button = document.getElementById('submit')
+let userInput = document.getElementsByClassName('answer')
 let currentQuiz = 0;
 let score = 0;
 
@@ -88,9 +88,9 @@ let removeSelectAns = () => {
 
 submitBtn.addEventListener("click" , () => {
   const selectedIndex = getOptions();
-  if (option_1.checked || option_2.checked || option_3.checked || option_4.checked) {
-    submitBtn.disabled = false; // Enable the button
-  }
+  // if (option_1.checked || option_2.checked || option_3.checked || option_4.checked) {
+  //   submitBtn.disabled = false; // Enable the button
+  // }
   if (selectedIndex == quizData[currentQuiz].correct) {
       score = score + 1;
     }
